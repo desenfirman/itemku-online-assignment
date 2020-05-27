@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testcase Question 1</title>
+</head>
+<body>
+    <h1>Testcase Question 1</h1>
+    <h2>Please check on browser's javascript console for result</h2>
+    
+    <script src="question-1.js"></script>
+    <script>
+
+        // Test case 1: from examples
+        var answer1 = solution([
+            "Enter uid1234 Muzi", 
+            "Enter uid4567 Prodo", 
+            "Leave uid1234", 
+            "Enter uid1234 Prodo", 
+            "Change uid4567 Ryan"
+        ]);
+
+        console.log(answer1);
+
+        // Test case 2: limitations only uppercase, lowercase and number
+        var answer2 = solution([
+            "Enter uid1#@4 Muzi", 
+            "Enter uid4(*7 Prodo", 
+            "Leave uid1234", 
+            "Enter uid1234 Prodo", 
+            "Change uid4567 Ryan"
+        ]);
+        console.log(answer2);
+
+        // Test case 3: limitations only string between 1-10
+        var answer3 = solution([
+            "Enter uid1231412312 Muzi", 
+            "Enter uid Prodo31123131232", 
+            "Leave uid1234", 
+            "Enter uid1234 Prodo", 
+            "Change uid4567 Ryan"
+        ]);
+        console.log(answer3);
+
+        // Test case 4: limitations only record between 1-100000
+        record = [];
+        for (let i = 0; i < 100001; i++) {
+            record.push("Enter uid " + i + " Random names");
+        }
+        var answer4 = solution(record);
+        console.log(answer4);
+
+    </script>
+
+</body>
+</html>
