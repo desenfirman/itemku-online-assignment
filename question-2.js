@@ -2,7 +2,7 @@ function solution(N, users) {
     var answer = [];
     var user_length = users.length;
 
-    // collecting frequency data using reducer O(user_length)
+    // collecting frequency data using reducer. time complexity = O(user_length)
     frequency = users.reduce((frequency, el) => {
         if (typeof frequency[el] == 'undefined') {
             frequency[el] = 0;
@@ -15,7 +15,7 @@ function solution(N, users) {
     var fr_data = []
     var total_complete = user_length;
     
-    // map possibilites for each stage O(stage_length)
+    // map possibilites for each stage. time complexity = O(stage_length)
     for (let i = 1; i <= N; i++) {
 
         // if stage is not available in frequency data, 
